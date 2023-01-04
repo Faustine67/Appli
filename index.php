@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title> Ajout produit </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
     </head>
     <body>
 
@@ -13,7 +14,7 @@
         <form action= "traitement.php"method="post">    <!-- "action" indicate the form target, the file to reach when the user will send the form -->
             <p>
                 <form class ="main-style">
-                <label>
+                <label class="form-label">
                     Nom du produit:
                     <input type="text" name="name" id="product-name">
                 </label>
