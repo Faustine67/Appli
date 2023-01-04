@@ -7,11 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> Récapitualif des produits </title>
+    <title> Récapitulatif des produits </title>
 </head>
 <body>
-    <?php 
-        if(!isset($_SESSION["products"])|| empty($_SESSION["products"])){
+    <?php //var_dump($_SESSION);
+        if (!isset($_SESSION['products']) || empty($_SESSION['products'])){
             echo "<p> Aucun produit en session... </p>";
         }
         else {
@@ -26,8 +26,8 @@
                         "</tr>",
                     "</thead>",
                     "<tbody>";
-                    $totalGeneral=0;
-            foreach($_SESSION["products"]as $index=> $product){
+            $totalGeneral=0;
+            foreach($_SESSION['products']as $index=> $product){
                 echo "<tr>",
                         "<td>".$index."</td>",
                         "<td>".$product["name"]."</td>",
@@ -42,8 +42,8 @@
                     "<td><strong>".number_format($totalGeneral,2,",","&nbsp;")."&nbsp;€</strong></td>",
                     "</tr>",
             "</tbody>",
-            "</tables>";
-        }
+            "</table>";
+         } 
         ?>
 </body>
 </html>
