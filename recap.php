@@ -40,7 +40,7 @@ session_start();
 			"<td>" . $index . "</td>",
 			"<td>" . $product["name"] . "</td>",
 			"<td>" . number_format($product["price"], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-			"<td><a href='traitement.php?action=minusqtt&index=" . $index . "'>-</a>" . $product["qtt"] . "</td>", // il faudra ajouter le href action=addqtt apres $product//
+			"<td><a href='traitement.php?action=minusQtt&index=" . $index . "'>-</a>" . $product["qtt"] . "<a href='traitement.php?action=addQtt&index=" . $index . "'>+</a>" . "</td>",
 			"<td>" . number_format($product["total"], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 			"</tr>";
 			$totalGeneral += $product["total"];

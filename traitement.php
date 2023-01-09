@@ -2,6 +2,7 @@
 session_start(); //Function used to create & save the informations in a session
 
 
+
 switch ($_GET['action']) {
 
 	case 'addProduct':
@@ -27,7 +28,16 @@ switch ($_GET['action']) {
 		break;
 
 	case 'minusQtt':
-		var_dump($_SESSION['products'])[$_GET["index"]]["qtt"]--;die
-		// ("Location:recap.php");
-		// break;
+		$_SESSION['products'][$_GET['index']]['qtt']--;
+		header("Location:recap.php");
+		break;
+	case 'AddQtt':
+		$_SESSION['products'][$_GET['index']]['qtt']++;
+		header("Location:recap.php");
+		break;
+		// case 'DeleteQtt':
+		// 	$_SESSION['products'][$_GET['index']]['qtt']=0;
+		// 	header("Location:recap.php");
+		// 	break;
+
 }
