@@ -9,12 +9,19 @@
 	<!--<link rel="stylesheet" type="text/css" href="style.css"> -->
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 </head>
-<nav class="d-flex flex-row justify-content-end" class="navbar navbar-light" style="background-color: #e3f2fd;">
-	<a class="p-2 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
-	<a class="p-2 text-grey" style="text-decoration:none" href="recap.php"> <i class="fa-solid fa-cart-shopping"></i> </a>
-</nav>
 
 <body>
+	<nav class="d-flex flex-row justify-content-end" class="navbar navbar-light" style="background-color: #e3f2fd;">
+		<a class="p-2 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
+		<a class="p-2 text-grey" style="text-decoration:none" href="recap.php"> <i class="fa-solid fa-cart-shopping"></i> </a>
+	</nav>
+	<?php
+	session_start();
+	if (isset($_SESSION['message'])) {
+
+		echo $_SESSION['message'];
+		unset($_SESSION['message']);
+	} ?>
 	<span class="align-middle">
 		<h1 class="p-3 mb-2 bg-info text-white"> Ajouter un produit </h1>
 	</span>

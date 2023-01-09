@@ -21,23 +21,34 @@ switch ($_GET['action']) {
 				];
 
 				$_SESSION['products'][] = $product; // Stock the datas in a session
+
+				$_SESSION['message'] = "<p class ='bg-success text-light'>Le produit " . $product['name'] . " a bien été ajouté au panier</p>";
 			} //var_dump( $_SESSION['products']);die;
 		}
 
 		header("Location:index.php"); // Send a new form to the user.
 		break;
 
-	case 'minusQtt':
+	case 'minusQtt': //decrease the quantity in the recap
+		if ($_SESSION['products'][$_GET['index']]['qtt'] == 1) {
+			header('Location:traitement.php?action=deleteQtt&index=' . $_GET['index']);
+			break;
+		}
 		$_SESSION['products'][$_GET['index']]['qtt']--;
+
 		header("Location:recap.php");
 		break;
-	case 'AddQtt':
+
+	case 'addQtt': //increase the quantity in the recap
 		$_SESSION['products'][$_GET['index']]['qtt']++;
 		header("Location:recap.php");
 		break;
-		// case 'DeleteQtt':
-		// 	$_SESSION['products'][$_GET['index']]['qtt']=0;
-		// 	header("Location:recap.php");
-		// 	break;
 
+	case 'deleteQtt': //delete the quantity in the recap
+		unset($_SESSION['products'][$_GET['index']]);
+		$_SESSION['messageDelete'] = "<p class='error'>Article supprimé du panier";
+		$_SESSION['message'] = "<p class ='bg-danger text-light'>Le produit " . $product['name'] . " a bien été supprimé</p>";
+		header("Location:recap.php");
+
+		break;
 }

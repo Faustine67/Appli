@@ -18,6 +18,12 @@ session_start();
 </nav>
 
 <body>
+	<?php
+	if (isset($_SESSION['message'])) {
+
+		echo $_SESSION['message'];
+		unset($_SESSION['message']);
+	} ?>
 	<?php //var_dump($_SESSION);
 
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
@@ -40,7 +46,7 @@ session_start();
 			"<td>" . $index . "</td>",
 			"<td>" . $product["name"] . "</td>",
 			"<td>" . number_format($product["price"], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-			"<td><a href='traitement.php?action=minusQtt&index=" . $index . "'>-</a>" . $product["qtt"] . "<a href='traitement.php?action=addQtt&index=" . $index . "'>+</a>" . "</td>",
+			"<td><a href='traitement.php?action=minusQtt&index=" . $index . "'>-</a>" . $product["qtt"] . "<a href='traitement.php?action=addQtt&index=" . $index . "'>+</a>" . "<a href='traitement.php?action=deleteQtt&index=" . $index . "'><i class='fa-solid fa-trash'></i></a></td>",
 			"<td>" . number_format($product["total"], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 			"</tr>";
 			$totalGeneral += $product["total"];
