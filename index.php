@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 </head>
 <nav class="d-flex flex-row justify-content-end" class="navbar navbar-light" style="background-color: #e3f2fd;">
-	<a class="p-2" href="index.php">Ajout Article</a>
-	<a class="p-2" href="recap.php"> Mon Panier </a>
+	<a class="p-2 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
+	<a class="p-2 text-grey" style="text-decoration:none" href="recap.php"> Mon Panier </a>
 </nav>
 
 <body>

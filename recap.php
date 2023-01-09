@@ -13,8 +13,8 @@ session_start();
 
 </head>
 <nav class="d-flex flex-row justify-content-end" class="navbar-light" style="background-color: #e3f2fd;">
-	<a class="p-2" href="index.php">Ajout Article</a>
-	<a class="p-2" href="recap.php"> Mon Panier </a>
+	<a class="p-2 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
+	<a class="p-2 text-grey" style="text-decoration:none" href="recap.php"> Mon Panier </a>
 </nav>
 
 <body>
@@ -23,7 +23,7 @@ session_start();
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
 		echo "<p> Aucun produit en session... </p>";
 	} else {
-		echo '<table class="table table-striped table-bordered  " style="width : 60%; margin: auto">
+		echo '<table class="table table-striped table-bordered" class="shadow-lg p-3 mb-5 bg-white rounded" style="width : 60%; margin: auto">
 		<thead>
 		<tr>
 		<th scope="col ">#</th>
