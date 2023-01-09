@@ -23,14 +23,14 @@ session_start();
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
 		echo "<p> Aucun produit en session... </p>";
 	} else {
-		echo '<table class="table table-striped ">
+		echo '<table class="table table-striped table-bordered  " style="width : 60%; margin: auto">
 		<thead>
 		<tr>
-		<th scope="col">#</th>
-		<th scope="col">Nom</th>
-		<th scope="col">Prix</th>
-		<th scope="col">Quantité</th>
-		<th scope="col">Total</th>',
+		<th scope="col ">#</th>
+		<th scope="col class="col-md-1">Nom</th>
+		<th scope="col  class="col-md-1">Prix</th>
+		<th scope="col class="col-md-1">Quantité</th>
+		<th scope="col ">Total</th>',
 		"</tr>",
 		"</thead>",
 		"<tbody>";
