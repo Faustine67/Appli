@@ -9,9 +9,9 @@
 	<!--<link rel="stylesheet" type="text/css" href="style.css"> -->
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 </head>
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-	<a href="index.php">Ajout Article</a>
-	<a href="recap.php"> Mon Panier </a>
+<nav class="d-flex flex-row justify-content-end" class="navbar navbar-light" style="background-color: #e3f2fd;">
+	<a class="p-2" href="index.php">Ajout Article</a>
+	<a class="p-2" href="recap.php"> Mon Panier </a>
 </nav>
 
 <body>
