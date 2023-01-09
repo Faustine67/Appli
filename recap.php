@@ -12,16 +12,21 @@ session_start();
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 
 </head>
+<nav class="navbar-light" style="background-color: #e3f2fd;">
+	<a href="index.php">Ajout Article</a>
+	<a href="recap.php"> Mon Panier </a>
+</nav>
 
 <body>
 	<?php //var_dump($_SESSION);
+
 	if (!isset($_SESSION['products']) || empty($_SESSION['products'])) {
 		echo "<p> Aucun produit en session... </p>";
 	} else {
 		echo '<table class="table table-striped ">
 		<thead>
 		<tr>
-		<th scope="col" >#</th>
+		<th scope="col">#</th>
 		<th scope="col">Nom</th>
 		<th scope="col">Prix</th>
 		<th scope="col">Quantité</th>

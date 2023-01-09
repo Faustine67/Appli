@@ -9,6 +9,10 @@
 	<!--<link rel="stylesheet" type="text/css" href="style.css"> -->
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 </head>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	<a href="index.php">Ajout Article</a>
+	<a href="recap.php"> Mon Panier </a>
+</nav>
 
 <body>
 	<span class="align-middle">
@@ -17,19 +21,19 @@
 	<form action="traitement.php" method="post"> <!-- "action" indicate the form target, the file to reach when the user will send the form -->
 		<p>
 			<!-- <form class ="main-style"> -->
-			<label class="form-label">
+			<label class="p-3 mb-2 form-label">
 				Nom du produit:
 				<input type="text" name="name" id="product-name" class="form-control">
 			</label>
 		</p>
 		<p>
-			<label class="form-label">
+			<label class="p-3 mb-2 form-label">
 				Prix du produit:
 				<input type="number" step="any" name="price" id="price-name" class="form-control">
 			</label>
 		</p>
 		<p>
-			<label class="form-label">
+			<label class="p-3 mb-2 form-label">
 				Quantité désirée:
 				<input type="number" name="qtt" value="1" id="quantity-name" class="form-control">
 			</label>
