@@ -53,8 +53,9 @@ session_start();
 		}
 		echo "<tr>",
 		"<td colspan=4>Total général : </td>",
+		"<input type="submit" name="submit" value="Annuler le pannier" class="p-3 mb-2 btn btn-outline-danger">",
 		"<td><strong>" . number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</strong></td>",
-		"</tr>",
+		
 		"</tbody>",
 		"</table>";
 	}

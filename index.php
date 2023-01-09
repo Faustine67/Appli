@@ -46,7 +46,7 @@
 			</label>
 		</p>
 		<p>
-			<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info"></button>
+			<input type="submit" name="submit" value="Ajouter le produit" class="p-3 mb-2 btn btn-outline-info">
 		</p>
 	</form>
 
