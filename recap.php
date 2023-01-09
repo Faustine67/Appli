@@ -7,14 +7,14 @@ session_start();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<script src="https://kit.fontawesome.com/f937b853a3.js" crossorigin="anonymous"></script>
 	<title> Récapitulatif des produits </title>
 	<link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css>
 
 </head>
 <nav class="d-flex flex-row justify-content-end" class="navbar-light" style="background-color: #e3f2fd;">
 	<a class="p-2 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
-	<a class="p-2 text-grey" style="text-decoration:none" href="recap.php"> Mon Panier </a>
+	<a class="p-2 text-grey" style="text-decoration:none" href="recap.php"> <i class="fa-solid fa-cart-shopping"></i> </a>
 </nav>
 
 <body>
@@ -40,7 +40,7 @@ session_start();
 			"<td>" . $index . "</td>",
 			"<td>" . $product["name"] . "</td>",
 			"<td>" . number_format($product["price"], 2, ",", "&nbsp;") . "&nbsp;€</td>",
-			"<td>" . $product["qtt"] . "</td>",
+			"<td><a href='traitement.php?action=minusqtt&index=" . $index . "'>-</a>" . $product["qtt"] . "</td>", // il faudra ajouter le href action=addqtt apres $product//
 			"<td>" . number_format($product["total"], 2, ",", "&nbsp;") . "&nbsp;€</td>",
 			"</tr>";
 			$totalGeneral += $product["total"];
