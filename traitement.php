@@ -29,7 +29,7 @@ switch ($_GET['action']) {
 		header("Location:index.php"); // Send a new form to the user.
 		break;
 
-	case 'minusQtt': //decrease the quantity in the recap
+	case 'minusQtt': //decrease the quantity for a product
 		if ($_SESSION['products'][$_GET['index']]['qtt'] == 1) {
 			header('Location:traitement.php?action=deleteQtt&index=' . $_GET['index']);
 			break;
@@ -39,16 +39,22 @@ switch ($_GET['action']) {
 		header("Location:recap.php");
 		break;
 
-	case 'addQtt': //increase the quantity in the recap
+	case 'addQtt': //increase the quantity for a product
 		$_SESSION['products'][$_GET['index']]['qtt']++;
 		header("Location:recap.php");
 		break;
 
-	case 'deleteQtt': //delete the quantity in the recap
+	case 'deleteQtt': //delete the quantity for a product &indicate a confirmation message
 		unset($_SESSION['products'][$_GET['index']]);
 		$_SESSION['messageDelete'] = "<p class='error'>Article supprimé du panier";
 		$_SESSION['message'] = "<p class ='bg-danger text-light'>Le produit " . $product['name'] . " a bien été supprimé</p>";
 		header("Location:recap.php");
 
 		break;
-}
+	case 'deleteCart': // delete the entire quantity in the cart
+		unset($_SESSION['products'][$_GET['index']]['total']);
+			header('Location:recap.php');
+		break;
+		}
+
+
