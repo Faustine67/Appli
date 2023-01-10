@@ -52,10 +52,9 @@ session_start();
 			$totalGeneral += $product["total"];
 		}
 		echo "<tr>",
-		"<td colspan=4>Total général : </td>",
-		"<input type="submit" name="submit" value="Annuler le pannier" class="p-3 mb-2 btn btn-outline-danger">",
-		"<td><strong>" . number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</strong></td>",
-		
+		"<td colspan='4'>Total général : <strong>". number_format($totalGeneral, 2, ",", "&nbsp;") . "&nbsp;€</strong></td>,
+		<td><input type='submit' name='submit' value='Annuler le panier' class='p-3 mb-2 btn btn-outline-danger' class='text-center'>",
+		"</tr>",
 		"</tbody>",
 		"</table>";
 	}
