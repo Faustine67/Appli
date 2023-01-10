@@ -13,8 +13,8 @@ session_start();
 
 </head>
 <nav class="d-flex flex-row justify-content-end" class="navbar-light" style="background-color: #e3f2fd;">
-	<a class="p-3 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>;
-	<a class="p-3 text-grey" style="text-decoration:none" href="recap.php"> <i class="fa-solid fa-cart-shopping"></i> <span><?php echo count($_SESSION['products'])?></span></a>;
+	<a class="p-3 text-grey" style="text-decoration:none" href="index.php">Ajout Article</a>
+	<a class="p-3 text-grey" style="text-decoration:none" href="recap.php"> <i class="fa-solid fa-cart-shopping"></i> <span><?php echo count($_SESSION['products'])?></span></a>
 </nav>
 
 <body>
